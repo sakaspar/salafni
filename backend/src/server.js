@@ -7,6 +7,7 @@ import clientRoutes from "./routes/clientRoutes.js";
 import loanRoutes from "./routes/loanRoutes.js";
 import merchantRoutes from "./routes/merchantRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import supportRoutes from "./routes/supportRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorHandler.js";
 import { initializeDataLake } from "./db/dataLake.js";
 import { startRepaymentCron } from "./services/cronService.js";
@@ -24,6 +25,7 @@ initializeDataLake([
   "kyc_documents.json",
   "admins.json",
   "notifications.json",
+  "support_tickets.json",
 ]);
 
 app.use(cors());
@@ -39,6 +41,7 @@ app.use("/api/client", clientRoutes);
 app.use("/api/loans", loanRoutes);
 app.use("/api/merchant", merchantRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/support", supportRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
