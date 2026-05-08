@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "Salafni",
+    "slug": "salafni",
+    "scheme": "salafni",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#1B4FD8"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

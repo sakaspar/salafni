@@ -1,0 +1,6 @@
+export const TIER_COLORS = {
+  STARTER: "#CD7F32",
+  TRUSTED: "#C0C0C0",
+  ESTABLISHED: "#FFD700",
+  PREMIUM: "#B9F2FF",
+};

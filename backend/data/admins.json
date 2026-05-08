@@ -1,0 +1,9 @@
+[
+  {
+    "id": "admin-1",
+    "name": "Super Admin",
+    "email": "admin@salafni.tn",
+    "passwordHash": "Admin123!",
+    "role": "SUPER_ADMIN"
+  }
+]

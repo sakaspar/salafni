@@ -1,0 +1,23 @@
+{
+  "name": "salafni-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "backend",
+    "web",
+    "mobile",
+    "shared"
+  ],
+  "scripts": {
+    "dev:backend": "npm --workspace backend run dev",
+    "dev:web": "npm --workspace web run dev",
+    "dev:mobile": "npm --workspace mobile run start",
+    "dev:full:web": "concurrently \"npm run dev:backend\" \"npm run dev:web\"",
+    "dev:web+mobile": "concurrently \"npm run dev:web\" \"npm run dev:mobile\"",
+    "seed": "npm --workspace backend run seed",
+    "lint": "npm --workspace web run lint && npm --workspace backend run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

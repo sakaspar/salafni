@@ -1,0 +1,41 @@
+[
+  {
+    "id": "merchant-1",
+    "businessName": "TechStore Tunis",
+    "ownerName": "Karim Boussetta",
+    "phone": "20000111",
+    "email": "techstore@salafni.tn",
+    "passwordHash": "Merchant123!",
+    "category": "ELECTRONICS",
+    "status": "ACTIVE",
+    "totalTransactions": 12,
+    "totalVolume": 5600,
+    "createdAt": "2026-03-10T08:00:00.000Z"
+  },
+  {
+    "id": "merchant-2",
+    "businessName": "Clinique El Amal",
+    "ownerName": "Lina Marzouki",
+    "phone": "20000112",
+    "email": "clinique@salafni.tn",
+    "passwordHash": "Merchant123!",
+    "category": "HEALTH",
+    "status": "ACTIVE",
+    "totalTransactions": 8,
+    "totalVolume": 4200,
+    "createdAt": "2026-03-11T08:00:00.000Z"
+  },
+  {
+    "id": "merchant-3",
+    "businessName": "École Avenir",
+    "ownerName": "Sami Triki",
+    "phone": "20000113",
+    "email": "ecole@salafni.tn",
+    "passwordHash": "Merchant123!",
+    "category": "EDUCATION",
+    "status": "ACTIVE",
+    "totalTransactions": 5,
+    "totalVolume": 3000,
+    "createdAt": "2026-03-12T08:00:00.000Z"
+  }
+]

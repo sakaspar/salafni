@@ -1,0 +1,72 @@
+[
+  {
+    "id": "loan-1",
+    "userId": "user-1",
+    "merchantId": "merchant-1",
+    "amount": 300,
+    "status": "ACTIVE",
+    "originationFee": 15,
+    "totalRepayable": 315,
+    "weeklyPayment": 78.75,
+    "disbursedAt": "2026-04-20T08:00:00.000Z",
+    "completedAt": null,
+    "dueDate": "2026-05-18T08:00:00.000Z",
+    "createdAt": "2026-04-19T08:00:00.000Z"
+  },
+  {
+    "id": "loan-2",
+    "userId": "user-2",
+    "merchantId": "merchant-2",
+    "amount": 400,
+    "status": "COMPLETED",
+    "originationFee": 20,
+    "totalRepayable": 420,
+    "weeklyPayment": 105,
+    "disbursedAt": "2026-03-01T08:00:00.000Z",
+    "completedAt": "2026-03-29T08:00:00.000Z",
+    "dueDate": "2026-03-29T08:00:00.000Z",
+    "createdAt": "2026-02-28T08:00:00.000Z"
+  },
+  {
+    "id": "loan-3",
+    "userId": "user-3",
+    "merchantId": "merchant-3",
+    "amount": 1000,
+    "status": "COMPLETED",
+    "originationFee": 50,
+    "totalRepayable": 1050,
+    "weeklyPayment": 262.5,
+    "disbursedAt": "2026-02-01T08:00:00.000Z",
+    "completedAt": "2026-03-01T08:00:00.000Z",
+    "dueDate": "2026-03-01T08:00:00.000Z",
+    "createdAt": "2026-01-31T08:00:00.000Z"
+  },
+  {
+    "id": "loan-4",
+    "userId": "user-4",
+    "merchantId": "merchant-1",
+    "amount": 1500,
+    "status": "COMPLETED",
+    "originationFee": 75,
+    "totalRepayable": 1575,
+    "weeklyPayment": 393.75,
+    "disbursedAt": "2026-01-15T08:00:00.000Z",
+    "completedAt": "2026-02-12T08:00:00.000Z",
+    "dueDate": "2026-02-12T08:00:00.000Z",
+    "createdAt": "2026-01-14T08:00:00.000Z"
+  },
+  {
+    "id": "loan-5",
+    "userId": "user-5",
+    "merchantId": "merchant-1",
+    "amount": 300,
+    "status": "DEFAULTED",
+    "originationFee": 15,
+    "totalRepayable": 315,
+    "weeklyPayment": 78.75,
+    "disbursedAt": "2026-03-20T08:00:00.000Z",
+    "completedAt": "2026-04-17T08:00:00.000Z",
+    "dueDate": "2026-04-17T08:00:00.000Z",
+    "createdAt": "2026-03-19T08:00:00.000Z"
+  }
+]

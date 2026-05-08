@@ -1,0 +1,29 @@
+[
+  {
+    "id": "kyc-1",
+    "userId": "user-1",
+    "type": "NATIONAL_ID_FRONT",
+    "fileUrl": "/uploads/user-1-front.jpg",
+    "status": "APPROVED",
+    "reviewedBy": "admin-1",
+    "createdAt": "2026-03-01T08:00:00.000Z"
+  },
+  {
+    "id": "kyc-2",
+    "userId": "user-2",
+    "type": "SELFIE",
+    "fileUrl": "/uploads/user-2-selfie.jpg",
+    "status": "PENDING",
+    "reviewedBy": null,
+    "createdAt": "2026-03-02T08:00:00.000Z"
+  },
+  {
+    "id": "d2dd51e9-e57b-4b8d-a5be-0b2bee786be1",
+    "userId": "4a4419e5-af55-4233-8907-19aaa2ecd3ef",
+    "type": "NATIONAL_ID_FRONT",
+    "fileUrl": "/uploads/2b89d1c5366a7ad21c224b988b94d92b",
+    "status": "PENDING",
+    "reviewedBy": null,
+    "createdAt": "2026-05-08T20:22:24.858Z"
+  }
+]
