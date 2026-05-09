@@ -17,6 +17,15 @@ export function checkTierUpgrade(userId) {
   else if (clean >= 2) nextTier = "TRUSTED";
   else nextTier = "STARTER";
 
+  // JOBLESS users capped at TRUSTED (600 DT max ever)
+  if (user.occupation === "JOBLESS") {
+    const trustedIdx = TIER_ORDER.indexOf("TRUSTED");
+    const nextIdx = TIER_ORDER.indexOf(nextTier);
+    if (nextIdx > trustedIdx) {
+      nextTier = "TRUSTED";
+    }
+  }
+
   const currIdx = TIER_ORDER.indexOf(user.creditTier);
   const nextIdx = TIER_ORDER.indexOf(nextTier);
   if (nextIdx > currIdx) {

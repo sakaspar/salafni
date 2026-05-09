@@ -2,10 +2,10 @@
   {
     "id": "notif-1",
     "userId": "user-1",
-    "title": "Paiement a venir",
-    "body": "Votre prochaine echeance est dans 2 jours.",
+    "title": "Paiement à venir",
+    "body": "Votre prochaine échéance est dans 2 jours.",
     "type": "REPAYMENT",
     "read": false,
-    "createdAt": "2026-05-07T08:00:00.000Z"
+    "createdAt": "2026-05-08T00:29:39.251Z"
   }
 ]

@@ -15,6 +15,7 @@ export default function AdminLoginPage() {
     setError("");
     try {
       const res = await api.post("/auth/admin/login", { email, password });
+      // Standardized response shape is { success: true, data: { accessToken, ... } }
       const { accessToken } = res.data.data;
       localStorage.setItem("salafni_token", accessToken);
       localStorage.setItem("salafni_role", "ADMIN");

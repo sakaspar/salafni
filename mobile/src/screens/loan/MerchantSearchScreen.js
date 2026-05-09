@@ -8,7 +8,7 @@ export default function MerchantSearchScreen({ navigation }) {
   const [merchants, setMerchants] = useState([]);
 
   useEffect(() => {
-    api.get("/merchant/list").then((r) => setMerchants(r.data.merchants || [])).catch(() => setMerchants([]));
+    api.get("/merchant/list").then((r) => setMerchants(r.data.data.merchants || [])).catch(() => setMerchants([]));
   }, []);
 
   const filtered = merchants.filter((m) => m.businessName.toLowerCase().includes(search.toLowerCase()));

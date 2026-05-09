@@ -16,6 +16,9 @@ import SubmittedScreen from "../screens/loan/SubmittedScreen";
 import RepaymentScreen from "../screens/RepaymentScreen";
 import CreditScoreScreen from "../screens/CreditScoreScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import TicketListScreen from "../screens/TicketListScreen";
+import NewTicketScreen from "../screens/NewTicketScreen";
+import TicketDetailScreen from "../screens/TicketDetailScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +41,9 @@ export default function AppNavigator() {
         <Stack.Screen name="Repayments" component={RepaymentScreen} />
         <Stack.Screen name="CreditScore" component={CreditScoreScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Support" component={TicketListScreen} />
+        <Stack.Screen name="NewTicket" component={NewTicketScreen} />
+        <Stack.Screen name="TicketDetail" component={TicketDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

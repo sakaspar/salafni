@@ -10,10 +10,10 @@ export default function ClientKycPage() {
 
   const loadStatus = async () => {
     try {
-      const { data } = await api.get("/client/kyc/status");
-      setDocuments(data.documents || []);
+      const res = await api.get("/client/kyc/status");
+      setDocuments(res.data.data.documents || []);
     } catch (err) {
-      setError(err.response?.data?.message || "Failed loading KYC status");
+      setError(err.response?.data?.error?.message || "Failed loading KYC status");
     }
   };
 
@@ -36,7 +36,7 @@ export default function ClientKycPage() {
       setSuccess("KYC uploaded successfully.");
       await loadStatus();
     } catch (err) {
-      setError(err.response?.data?.message || "KYC upload failed");
+      setError(err.response?.data?.error?.message || "KYC upload failed");
     } finally {
       setLoading(false);
     }
