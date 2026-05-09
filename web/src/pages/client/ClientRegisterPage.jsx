@@ -23,7 +23,7 @@ export default function ClientRegisterPage() {
       await api.post("/auth/client/register", form);
       navigate("/client/login");
     } catch (err) {
-      setError(err.response?.data?.message || "Registration failed");
+      setError(err.response?.data?.error?.message || "Registration failed");
     } finally {
       setLoading(false);
     }

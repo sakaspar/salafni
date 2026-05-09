@@ -15,11 +15,11 @@ export default function MerchantLoginPage() {
     setError("");
     try {
       const { data } = await api.post("/auth/merchant/login", { email, password });
-      localStorage.setItem("salafni_token", data.accessToken);
+      localStorage.setItem("salafni_token", data.data.accessToken);
       localStorage.setItem("salafni_role", "MERCHANT");
       navigate("/merchant/dashboard");
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed");
+      setError(err.response?.data?.error?.message || "Login failed");
     } finally {
       setLoading(false);
     }

@@ -15,11 +15,11 @@ export default function ClientLoginPage() {
     setError("");
     try {
       const { data } = await api.post("/auth/client/login", { email, password });
-      localStorage.setItem("salafni_token", data.accessToken);
+      localStorage.setItem("salafni_token", data.data.accessToken);
       localStorage.setItem("salafni_role", "CLIENT");
       navigate("/client/dashboard");
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed");
+      setError(err.response?.data?.error?.message || "Login failed");
     } finally {
       setLoading(false);
     }

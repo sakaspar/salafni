@@ -35,7 +35,7 @@ export default function AdminDashboardPage() {
         setClients(c.data.clients || []);
         setKycQueue(k.data.documents || []);
       } catch (err) {
-        setError(err.response?.data?.message || "Failed loading dashboard");
+        setError(err.response?.data?.error?.message || "Failed loading dashboard");
       } finally {
         setLoading(false);
       }

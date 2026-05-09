@@ -95,5 +95,23 @@
     "tierUpgradeFrozen": false,
     "createdAt": "2026-05-08T20:21:44.395Z",
     "updatedAt": "2026-05-08T20:21:44.395Z"
+  },
+  {
+    "id": "5e130db4-b74d-45e7-bd5c-22d0e2e2f871",
+    "fullName": "Test User",
+    "phone": "20000000",
+    "nationalId": "11111111",
+    "email": "test1@salafni.tn",
+    "passwordHash": "$2b$10$4BJPE5EihfOduMdhRjDg/.pt9v05ibZtPuVciz7kDazRkGofDjJ0m",
+    "occupation": "Test",
+    "status": "PENDING",
+    "kycStatus": "NOT_SUBMITTED",
+    "creditTier": "STARTER",
+    "creditScore": 50,
+    "cleanRepaymentsCount": 0,
+    "latePaymentsCount": 0,
+    "tierUpgradeFrozen": false,
+    "createdAt": "2026-05-09T03:03:23.086Z",
+    "updatedAt": "2026-05-09T03:03:23.086Z"
   }
 ]

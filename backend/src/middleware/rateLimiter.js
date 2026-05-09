@@ -5,6 +5,7 @@ export const authRateLimiter = rateLimit({
   limit: 5, // Limit each IP to 5 requests per window
   standardHeaders: "draft-7",
   legacyHeaders: false,
+  skip: (req) => req.hostname === "localhost" || req.hostname === "127.0.0.1",
   message: {
     success: false,
     error: {

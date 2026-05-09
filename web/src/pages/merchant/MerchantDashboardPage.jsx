@@ -20,7 +20,7 @@ export default function MerchantDashboardPage() {
         setTransactions(t.data.transactions || []);
         setProfile(p.data.merchant);
       } catch (err) {
-        setError(err.response?.data?.message || "Failed loading merchant data");
+        setError(err.response?.data?.error?.message || "Failed loading merchant data");
       } finally {
         setLoading(false);
       }

@@ -15,7 +15,7 @@ export default function ClientDashboardPage() {
         setMe(profileRes.data.user);
         setLoans(loansRes.data.loans || []);
       } catch (err) {
-        setError(err.response?.data?.message || "Failed to load client dashboard");
+        setError(err.response?.data?.error?.message || "Failed to load client dashboard");
       } finally {
         setLoading(false);
       }
