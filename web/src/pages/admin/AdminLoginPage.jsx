@@ -14,12 +14,14 @@ export default function AdminLoginPage() {
     setLoading(true);
     setError("");
     try {
-      const { data } = await api.post("/auth/admin/login", { email, password });
-      localStorage.setItem("salafni_token", data.accessToken);
+      const res = await api.post("/auth/admin/login", { email, password });
+      // Standardized response shape is { success: true, data: { accessToken, ... } }
+      const { accessToken } = res.data.data;
+      localStorage.setItem("salafni_token", accessToken);
       localStorage.setItem("salafni_role", "ADMIN");
       navigate("/admin/dashboard");
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed");
+      setError(err.response?.data?.error?.message || "Login failed");
     } finally {
       setLoading(false);
     }

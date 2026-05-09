@@ -23,3 +23,27 @@ export const calcLoanNumbers = (amount) => {
 };
 
 export const clampScore = (value) => Math.max(0, Math.min(100, value));
+
+export const apiSuccess = (data) => ({
+  success: true,
+  data,
+});
+
+export const apiError = (code, message) => ({
+  success: false,
+  error: { code, message },
+});
+
+export const paginate = (items, page = 1, limit = 20) => {
+  const startIndex = (page - 1) * limit;
+  const endIndex = page * limit;
+  return {
+    items: items.slice(startIndex, endIndex),
+    pagination: {
+      total: items.length,
+      page: Number(page),
+      limit: Number(limit),
+      pages: Math.ceil(items.length / limit),
+    },
+  };
+};

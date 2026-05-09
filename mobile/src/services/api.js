@@ -13,12 +13,13 @@ api.interceptors.request.use(async (config) => {
 
 export async function cacheLoansAndRepayments() {
   try {
-    const { data: loansData } = await api.get("/loans/my");
-    await AsyncStorage.setItem("cached_loans", JSON.stringify(loansData.loans || []));
+    const res = await api.get("/loans/my");
+    const loans = res.data.data.loans || [];
+    await AsyncStorage.setItem("cached_loans", JSON.stringify(loans));
     const repaymentsByLoan = {};
-    for (const loan of loansData.loans || []) {
-      const { data: repayData } = await api.get(`/loans/${loan.id}/repayments`);
-      repaymentsByLoan[loan.id] = repayData.repayments || [];
+    for (const loan of loans) {
+      const repayRes = await api.get(`/loans/${loan.id}/repayments`);
+      repaymentsByLoan[loan.id] = repayRes.data.data.repayments || [];
     }
     await AsyncStorage.setItem("cached_repayments", JSON.stringify(repaymentsByLoan));
   } catch (_e) {

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "ticket-1",
+    "userId": "user-1",
+    "subject": "Problème de remboursement",
+    "category": "REPAYMENT_ISSUE",
+    "description": "Je n'arrive pas à payer ma mensualité.",
+    "status": "OPEN",
+    "priority": "HIGH",
+    "messages": [
+      {
+        "id": "msg-1",
+        "senderId": "user-1",
+        "senderRole": "USER",
+        "message": "Bonjour, j'ai un souci.",
+        "createdAt": "2026-05-08T00:29:39.251Z"
+      }
+    ],
+    "assignedTo": null,
+    "createdAt": "2026-05-08T00:29:39.251Z",
+    "updatedAt": "2026-05-08T00:29:39.251Z",
+    "resolvedAt": null
+  },
+  {
+    "id": "ticket-2",
+    "userId": "user-2",
+    "subject": "Changement d'adresse",
+    "category": "ACCOUNT_ISSUE",
+    "description": "Je veux changer mon adresse.",
+    "status": "RESOLVED",
+    "priority": "LOW",
+    "messages": [
+      {
+        "id": "msg-2",
+        "senderId": "user-2",
+        "senderRole": "USER",
+        "message": "Bonjour, j'ai déménagé.",
+        "createdAt": "2026-05-04T00:29:39.251Z"
+      },
+      {
+        "id": "msg-3",
+        "senderId": "admin-1",
+        "senderRole": "ADMIN",
+        "message": "C'est fait.",
+        "createdAt": "2026-05-05T00:29:39.251Z"
+      }
+    ],
+    "assignedTo": "admin-1",
+    "createdAt": "2026-05-04T00:29:39.251Z",
+    "updatedAt": "2026-05-05T00:29:39.251Z",
+    "resolvedAt": "2026-05-05T00:29:39.251Z"
+  }
+]

@@ -16,7 +16,7 @@ export default function ConfirmationScreen({ navigation, route }) {
       await api.post("/loans/apply", { merchantId: route.params.merchant.id, amount: route.params.amount });
       navigation.replace("Submitted");
     } catch (e) {
-      setError(e.response?.data?.message || "Failed to submit loan");
+      setError(e.response?.data?.error?.message || "Failed to submit loan");
     } finally {
       setLoading(false);
     }

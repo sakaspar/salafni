@@ -3,27 +3,79 @@
     "id": "kyc-1",
     "userId": "user-1",
     "type": "NATIONAL_ID_FRONT",
-    "fileUrl": "/uploads/user-1-front.jpg",
+    "fileUrl": "/uploads/user-1-id-front.jpg",
     "status": "APPROVED",
     "reviewedBy": "admin-1",
-    "createdAt": "2026-03-01T08:00:00.000Z"
+    "createdAt": "2026-03-25T00:29:39.251Z"
   },
   {
     "id": "kyc-2",
     "userId": "user-2",
-    "type": "SELFIE",
-    "fileUrl": "/uploads/user-2-selfie.jpg",
-    "status": "PENDING",
-    "reviewedBy": null,
-    "createdAt": "2026-03-02T08:00:00.000Z"
+    "type": "NATIONAL_ID_FRONT",
+    "fileUrl": "/uploads/user-2-id-front.jpg",
+    "status": "APPROVED",
+    "reviewedBy": "admin-1",
+    "createdAt": "2026-02-28T00:29:39.251Z"
   },
   {
-    "id": "d2dd51e9-e57b-4b8d-a5be-0b2bee786be1",
-    "userId": "4a4419e5-af55-4233-8907-19aaa2ecd3ef",
+    "id": "kyc-3",
+    "userId": "user-3",
     "type": "NATIONAL_ID_FRONT",
-    "fileUrl": "/uploads/2b89d1c5366a7ad21c224b988b94d92b",
-    "status": "PENDING",
+    "fileUrl": "/uploads/user-3-id-front.jpg",
+    "status": "APPROVED",
+    "reviewedBy": "admin-1",
+    "createdAt": "2026-01-09T00:29:39.251Z"
+  },
+  {
+    "id": "kyc-4",
+    "userId": "user-4",
+    "type": "NATIONAL_ID_FRONT",
+    "fileUrl": "/uploads/user-4-id-front.jpg",
+    "status": "APPROVED",
+    "reviewedBy": "admin-1",
+    "createdAt": "2025-10-21T00:29:39.251Z"
+  },
+  {
+    "id": "kyc-5",
+    "userId": "user-5",
+    "type": "NATIONAL_ID_FRONT",
+    "fileUrl": "/uploads/user-5-id-front.jpg",
+    "status": "APPROVED",
     "reviewedBy": null,
-    "createdAt": "2026-05-08T20:22:24.858Z"
+    "createdAt": "2026-02-08T00:29:39.251Z"
+  },
+  {
+    "id": "kyc-6",
+    "userId": "user-6",
+    "type": "NATIONAL_ID_FRONT",
+    "fileUrl": "/uploads/user-6-id-front.jpg",
+    "status": "APPROVED",
+    "reviewedBy": null,
+    "createdAt": "2026-04-09T00:29:39.251Z"
+  },
+  {
+    "id": "kyc-7",
+    "userId": "user-7",
+    "type": "NATIONAL_ID_FRONT",
+    "fileUrl": "/uploads/user-7-id-front.jpg",
+    "status": "APPROVED",
+    "reviewedBy": null,
+    "createdAt": "2026-03-10T00:29:39.251Z"
+  },
+  {
+    "id": "kyc-extra-1",
+    "userId": "user-5",
+    "type": "NATIONAL_ID_BACK",
+    "fileUrl": "/uploads/u5-id-back.jpg",
+    "status": "PENDING",
+    "createdAt": "2026-02-09T00:29:39.251Z"
+  },
+  {
+    "id": "kyc-extra-2",
+    "userId": "user-5",
+    "type": "SELFIE",
+    "fileUrl": "/uploads/u5-selfie.jpg",
+    "status": "PENDING",
+    "createdAt": "2026-02-09T00:29:39.251Z"
   }
 ]

@@ -12,10 +12,10 @@ export default function ClientDashboardPage() {
     const load = async () => {
       try {
         const [profileRes, loansRes] = await Promise.all([api.get("/client/me"), api.get("/loans/my")]);
-        setMe(profileRes.data.user);
-        setLoans(loansRes.data.loans || []);
+        setMe(profileRes.data.data.user);
+        setLoans(loansRes.data.data.loans || []);
       } catch (err) {
-        setError(err.response?.data?.message || "Failed to load client dashboard");
+        setError(err.response?.data?.error?.message || "Failed to load client dashboard");
       } finally {
         setLoading(false);
       }

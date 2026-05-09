@@ -14,13 +14,16 @@ export default function OtpScreen({ navigation, route }) {
     if (otp !== "1234") return setError("OTP invalide (dev: 1234)");
     setLoading(true);
     try {
-      const { data } = await api.post("/auth/client/login", {
+      const res = await api.post("/auth/client/login", {
         email: route.params.email,
         password: route.params.password || "Client123!",
       });
-      await AsyncStorage.setItem("salafni_token", data.accessToken);
+      // Handle standardized response { success, data: { accessToken, ... } }
+      const { accessToken } = res.data.data;
+      await AsyncStorage.setItem("salafni_token", accessToken);
       navigation.replace("KycUpload");
     } catch (_e) {
+      // Fallback for demo
       navigation.replace("KycUpload");
     } finally {
       setLoading(false);

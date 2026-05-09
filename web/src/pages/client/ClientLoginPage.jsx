@@ -14,12 +14,13 @@ export default function ClientLoginPage() {
     setLoading(true);
     setError("");
     try {
-      const { data } = await api.post("/auth/client/login", { email, password });
-      localStorage.setItem("salafni_token", data.accessToken);
+      const res = await api.post("/auth/client/login", { email, password });
+      const { accessToken } = res.data.data;
+      localStorage.setItem("salafni_token", accessToken);
       localStorage.setItem("salafni_role", "CLIENT");
       navigate("/client/dashboard");
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed");
+      setError(err.response?.data?.error?.message || "Login failed");
     } finally {
       setLoading(false);
     }

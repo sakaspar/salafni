@@ -7,9 +7,9 @@ Salafni is a Tunisian BNPL micro-lending platform ("Lend me") with one shared ba
 
 ## Project structure
 
-`/backend` Express API, business rules, cron, JSON data lake  
-`/web` Admin + Merchant dashboard  
-`/mobile` Expo mobile app (onboarding, loans, repayments, profile)  
+`/backend` Express API, business rules, cron, JSON data lake
+`/web` Admin + Merchant dashboard
+`/mobile` Expo mobile app (onboarding, loans, repayments, profile)
 `/shared` Shared constants (tiers, categories)
 
 ## Environment setup
@@ -71,57 +71,41 @@ npm run seed
 - Merchant (example): `techstore@salafni.tn` / `Merchant123!`
 - Client seed passwords: `Client123!`
 
-## API summary
+## New Features & Endpoints
 
-Auth:
-- `POST /api/auth/client/register`
-- `POST /api/auth/client/login`
-- `POST /api/auth/merchant/register`
-- `POST /api/auth/merchant/login`
-- `POST /api/auth/admin/login`
-- `POST /api/auth/refresh-token`
+### 1. Admin Management
+- `DELETE /api/admin/clients/:id` - Soft delete user
+- `PUT /api/admin/clients/:id/freeze` - Freeze user account
+- `PUT /api/admin/clients/:id/unfreeze` - Unfreeze user account
+- `GET /api/admin/kyc/pending` - List pending KYC
+- `PUT /api/admin/kyc/:userId/approve` - Approve KYC
+- `PUT /api/admin/kyc/:userId/reject` - Reject KYC
+- `PUT /api/admin/kyc/:userId/request-more` - Request more KYC info
+- `GET /api/admin/kyb/pending` - List pending KYB
+- `PUT /api/admin/kyb/:merchantId/approve` - Approve KYB
+- `PUT /api/admin/kyb/:merchantId/reject` - Reject KYB
 
-Client:
-- `GET /api/client/me`
-- `PUT /api/client/profile`
-- `POST /api/client/kyc/upload`
-- `GET /api/client/kyc/status`
+### 2. Merchant KYB
+- `POST /api/merchant/kyb/upload` - Upload KYB documents
+- `GET /api/merchant/kyb/status` - Check KYB status
 
-Loans/Repayments:
-- `POST /api/loans/apply`
-- `GET /api/loans/my`
-- `GET /api/loans/:id`
-- `POST /api/loans/:id/repay`
-- `GET /api/loans/:id/repayments`
+### 3. Support Tickets
+- `POST /api/support/tickets` - Create a support ticket
+- `GET /api/support/tickets/my` - Get own tickets
+- `GET /api/support/tickets/:id` - Get ticket details
+- `POST /api/support/tickets/:id/message` - Reply to ticket
+- `GET /api/support/admin/tickets` - Admin: List tickets
+- `PUT /api/support/admin/tickets/:id/status` - Admin: Update status
+- `PUT /api/support/admin/tickets/:id/priority` - Admin: Update priority
+- `PUT /api/support/admin/tickets/:id/assign` - Admin: Assign ticket
 
-Merchant:
-- `GET /api/merchant/list`
-- `GET /api/merchant/me`
-- `GET /api/merchant/transactions`
-- `GET /api/merchant/stats`
+### 4. Occupation Logic
+Updated occupations: `EMPLOYED_PUBLIC`, `EMPLOYED_PRIVATE`, `FREELANCER`, `INFORMAL`, `STUDENT`, `JOBLESS`.
+- `JOBLESS` users are capped at 300 DT (Starter) or 600 DT (Trusted max).
+- `EMPLOYED` users must provide 3 months bank statements for KYC.
 
-Admin:
-- `GET /api/admin/dashboard`
-- `GET /api/admin/clients`
-- `GET /api/admin/clients/:id`
-- `PUT /api/admin/clients/:id/verify`
-- `PUT /api/admin/clients/:id/reject`
-- `PUT /api/admin/clients/:id/suspend`
-- `GET /api/admin/loans`
-- `PUT /api/admin/loans/:id/approve`
-- `PUT /api/admin/loans/:id/reject`
-- `GET /api/admin/merchants`
-- `PUT /api/admin/merchants/:id/approve`
-- `GET /api/admin/revenue`
-- `GET /api/admin/kyc/queue`
-- `PUT /api/admin/kyc/:id/approve`
-- `PUT /api/admin/kyc/:id/reject`
-
-## Business rules implemented
-
-- 5% origination fee, 4-week repayment plan, DT currency
-- First loan capped to 300 DT
-- Loan disbursement simulated by setting loan status to `ACTIVE` after admin approval
-- Tier upgrades + score updates through `creditEngine`
-- Late penalties via cron each Monday 8AM (`node-cron`)
-- Consecutive missed payments can trigger default and suspension
+### 5. Security & Infrastructure
+- Input validation on all POST/PUT routes using `express-validator`.
+- Rate limiting on auth routes (5 attempts / 10 min).
+- Consistent API response shape: `{ success: true, data: {} }`.
+- Pagination on all list endpoints.

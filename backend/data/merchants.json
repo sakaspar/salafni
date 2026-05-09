@@ -5,12 +5,26 @@
     "ownerName": "Karim Boussetta",
     "phone": "20000111",
     "email": "techstore@salafni.tn",
-    "passwordHash": "Merchant123!",
+    "passwordHash": "$2b$10$aUrf5mHtRr3Lcs648XmoheKgU5Zei7Sr6PyhfQt1NhaFf6oNh9DBi",
     "category": "ELECTRONICS",
     "status": "ACTIVE",
     "totalTransactions": 12,
     "totalVolume": 5600,
-    "createdAt": "2026-03-10T08:00:00.000Z"
+    "createdAt": "2026-03-10T00:29:39.251Z",
+    "kybStatus": "APPROVED",
+    "kybRejectionReason": null,
+    "registrationNumber": "1234567/A/M/000",
+    "businessAddress": "Avenue Habib Bourguiba, Tunis",
+    "businessPhone": "71000111",
+    "kybDocuments": [
+      {
+        "id": "kyb-doc-1",
+        "type": "TRADE_REGISTER",
+        "fileUrl": "/uploads/m1-trade.pdf",
+        "status": "APPROVED",
+        "createdAt": "2026-03-10T00:29:39.251Z"
+      }
+    ]
   },
   {
     "id": "merchant-2",
@@ -18,12 +32,18 @@
     "ownerName": "Lina Marzouki",
     "phone": "20000112",
     "email": "clinique@salafni.tn",
-    "passwordHash": "Merchant123!",
+    "passwordHash": "$2b$10$6CKK8wVVq8fU2NRw73X6.OlSYT3I9Dq0ABpUIBH8JgyL7.EL1MKTe",
     "category": "HEALTH",
     "status": "ACTIVE",
     "totalTransactions": 8,
     "totalVolume": 4200,
-    "createdAt": "2026-03-11T08:00:00.000Z"
+    "createdAt": "2026-03-20T00:29:39.251Z",
+    "kybStatus": "APPROVED",
+    "kybRejectionReason": null,
+    "registrationNumber": "2234567/B/M/000",
+    "businessAddress": "Ennasr 2, Tunis",
+    "businessPhone": "71000112",
+    "kybDocuments": []
   },
   {
     "id": "merchant-3",
@@ -31,11 +51,25 @@
     "ownerName": "Sami Triki",
     "phone": "20000113",
     "email": "ecole@salafni.tn",
-    "passwordHash": "Merchant123!",
+    "passwordHash": "$2b$10$i8Tc2ys/SzaHegFgLzBAveF34G7u1zBUtV8TnYgo5ZOXXrXzuQQ0y",
     "category": "EDUCATION",
-    "status": "ACTIVE",
+    "status": "PENDING",
     "totalTransactions": 5,
     "totalVolume": 3000,
-    "createdAt": "2026-03-12T08:00:00.000Z"
+    "createdAt": "2026-03-30T00:29:39.251Z",
+    "kybStatus": "PENDING",
+    "kybRejectionReason": null,
+    "registrationNumber": "3234567/C/M/000",
+    "businessAddress": "Sfax Center",
+    "businessPhone": "74000113",
+    "kybDocuments": [
+      {
+        "id": "kyb-doc-2",
+        "type": "TRADE_REGISTER",
+        "fileUrl": "/uploads/m3-trade.pdf",
+        "status": "PENDING",
+        "createdAt": "2026-03-30T00:29:39.251Z"
+      }
+    ]
   }
 ]

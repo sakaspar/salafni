@@ -3,7 +3,7 @@
     "id": "admin-1",
     "name": "Super Admin",
     "email": "admin@salafni.tn",
-    "passwordHash": "Admin123!",
+    "passwordHash": "$2b$10$LI0R0Q8/3hld7rTbkYq7EectnXcbRg9sYX2yfaTRdiQtbqSXH/zXW",
     "role": "SUPER_ADMIN"
   }
 ]

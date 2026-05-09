@@ -11,16 +11,16 @@ export default function MerchantDashboardPage() {
   useEffect(() => {
     const run = async () => {
       try {
-        const [s, t, p] = await Promise.all([
+        const [sRes, tRes, pRes] = await Promise.all([
           api.get("/merchant/stats"),
           api.get("/merchant/transactions"),
           api.get("/merchant/me"),
         ]);
-        setStats(s.data);
-        setTransactions(t.data.transactions || []);
-        setProfile(p.data.merchant);
+        setStats(sRes.data.data);
+        setTransactions(tRes.data.data.transactions || []);
+        setProfile(pRes.data.data.merchant);
       } catch (err) {
-        setError(err.response?.data?.message || "Failed loading merchant data");
+        setError(err.response?.data?.error?.message || "Failed loading merchant data");
       } finally {
         setLoading(false);
       }
